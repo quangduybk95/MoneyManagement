@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EEEEEE"
+    >
+<LinearLayout
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+    <TextView
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/colorAccent"
+        android:text="Mời bạn nhập số tiền ước tính trong tháng"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_weight="5"
+        android:layout_height="wrap_content">
+        <EditText
+            android:textSize="15sp"
+            android:focusableInTouchMode="true"
+            android:id="@+id/input_money"
+            android:maxLines="1"
+            android:inputType="number"
+            android:hint="Nhập số tiền"
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:textSize="15sp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="VNĐ"
+            android:textStyle="bold"
+            />
+        <Button
+            android:textColor="#fff"
+            android:layout_marginLeft="2dp"
+            android:textSize="14sp"
+            android:id="@+id/set_money"
+            android:background="#00B0ff"
+            android:text="Sửa"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_weight="5"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textSize="15sp"
+            android:focusableInTouchMode="true"
+            android:text="Số tiền đã dùng"
+            android:layout_width="0dp"
+            android:gravity="left"
+            android:layout_weight="1.5"
+            android:maxLines="1"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/money_used"
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="15sp"
+            android:focusableInTouchMode="true"
+            android:text="0"
+            android:maxLines="1"
+            android:layout_width="0dp"
+            android:gravity="left"
+            android:layout_weight="2.5"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="VNĐ"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_weight="5"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textSize="15sp"
+            android:focusableInTouchMode="true"
+            android:text="Số dư"
+            android:layout_width="0dp"
+            android:gravity="left"
+            android:layout_weight="1.5"
+            android:maxLines="1"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/money_rest"
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="15sp"
+            android:focusableInTouchMode="true"
+            android:text="0"
+            android:maxLines="1"
+            android:layout_width="0dp"
+            android:gravity="left"
+            android:layout_weight="2.5"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="VNĐ"
+            />
+    </LinearLayout>
+    <View
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="#BBBBBB"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="#00C853"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_height="wrap_content">
+        <Button
+            android:elevation="0dp"
+            android:paddingRight="10dp"
+            android:background="#00C853"
+            android:layout_alignParentLeft="true"
+            android:textColor="#fff"
+            android:text="Chọn ngày nhanh"
+            android:id="@+id/choose_day"
+            android:layout_width="wrap_content"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_height="match_parent" />
+        <Button
+            android:elevation="0dp"
+            android:paddingLeft="10dp"
+            android:layout_alignParentRight="true"
+            android:textColor="#fff"
+            style="?android:attr/borderlessButtonStyle"
+            android:background="#00C853"
+            android:text="Hôm nay"
+            android:id="@+id/today"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+
+
+    </RelativeLayout>
+    <com.prolificinteractive.materialcalendarview.MaterialCalendarView
+        android:id="@+id/calendarView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        app:mcv_showOtherDates="all"
+        app:mcv_selectionColor="#00B0ff"
+        />
+
+    <View
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="#BBBBBB"/>
+    <TextView
+        android:gravity="center"
+        android:layout_gravity="center|clip_horizontal|center_vertical"
+        android:text="Sự kiện trong ngày"
+        android:textStyle="bold"
+        android:textSize="22dp"
+        android:textColor="#1e88e5"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <com.btloop.moneymanage.entity.ExpandableHeightListView
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:id="@+id/list_event"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </com.btloop.moneymanage.entity.ExpandableHeightListView>
+    <TextView
+        android:textColor="#00e676"
+        android:layout_marginBottom="25dp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/no_item"
+        android:textSize="25dp"
+        android:text="Không có sự kiện"
+        android:layout_gravity="center"
+        android:gravity="center|center_horizontal|center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <View
+        android:layout_marginTop="45dp"
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:background="#BBBBBB"/>
+
+</LinearLayout>
+</ScrollView>
